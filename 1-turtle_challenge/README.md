@@ -2,7 +2,7 @@
 
 This challenge is meant to introduce some basic ROS concepts to new users, however it assumes you’re familiar with fundamental ROS concepts, including creating and building packages and running nodes.
 
-The task is to develop a ROS node to control a turtle. The node must be capable of guiding the turtle to move in the format of a square in the turtlesim simulator. 
+The task is to develop a ROS node to control a turtle. The node must be capable of guiding the turtle to form a square in the turtlesim simulator. 
 
 ![turtle](image.png)
 
