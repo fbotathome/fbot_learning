@@ -4,6 +4,21 @@
 
 For these tutorials, you must have ROS2 Humble installed on an Ubuntu 22.04 system. For the ROS2 installation please folow this [step-by-step guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
 
+## Turtlesim
+
+- For the first challenge, you'll need to download the turtlesim ROS2 packages:
+
+```bash
+sudo apt update
+sudo apt install ros-humble-turtlesim
+```
+
+- If it was installed correctly, you should be able to launch the simulation:
+
+```bash
+ros2 run turtlesim turtlesim_node
+```
+
 ## Stage Simulator
 
 - For the second challenge, you'll need to download the Stage simulator ROS2 packages:
