@@ -1,5 +1,7 @@
 # Turtle Challenge
 
+**Please make sure you've installed the [turtle sim simulator](https://github.com/butia-bots/butia_learning/tree/main/0-installation#turtlesim) before developing this challenge**
+
 This challenge is meant to introduce some basic ROS concepts to new users, however it assumes you’re familiar with fundamental ROS concepts, including creating and building packages and running nodes.
 
 The task is to develop a ROS node to control a turtle. The node must be capable of guiding the turtle to form a square in the turtlesim simulator. 
