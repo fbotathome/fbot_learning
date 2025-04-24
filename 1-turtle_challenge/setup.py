@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'square_challehnge'
+package_name = 'turtle_challenge'
 
 setup(
     name=package_name,

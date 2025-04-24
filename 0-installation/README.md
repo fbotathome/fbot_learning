@@ -6,7 +6,7 @@ For these tutorials, you must have ROS2 Humble installed on an Ubuntu 22.04 syst
 
 ## Stage Simulator
 
-- For this challenge, you'll need to download the Stage simulator ROS2 packages:
+- For the second challenge, you'll need to download the Stage simulator ROS2 packages:
 
 ```bash
 sudo apt-get install git cmake g++ libjpeg8-dev libpng-dev libglu1-mesa-dev libltdl-dev libfltk1.1-dev
