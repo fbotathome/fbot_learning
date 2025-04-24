@@ -8,6 +8,7 @@
 
 This repository also has a few exercises to introduce new concepts:
 
+
 1. [Stage Challenge]()
 
 ## Versão em português
