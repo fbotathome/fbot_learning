@@ -40,6 +40,12 @@ The laser sensor performs 1080 measurements and covers 270 degrees (from 0 to 27
 
 ![Laser sensor](laserscan_image.png)
 
+## Help
+
+If you're having trouble developing the challenge, you can refer to this [series of videos](https://www.youtube.com/playlist?list=PLhxZVyws6Ytssb_CJA5cKxY5IxecOvJao), including video 19 which goes over a very similar challenge.
+
+If you have more specific questions, feel free to open a [discussion](https://github.com/butia-bots/butia_learning/discussions) in this repository.
+
 ## Credits
 
 Made and mantained by [Gabriel Dorneles](https://github.com/gadorneles) \

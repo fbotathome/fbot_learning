@@ -25,6 +25,10 @@ And the node:
 ros2 run turtle_challenge challenge_node
 ```
 
+## Help
+
+If you have specific questions, feel free to open a [discussion](https://github.com/butia-bots/butia_learning/discussions) in this repository.
+
 ## Credits
 
 Made and mantained by [Gabriel Dorneles](https://github.com/gadorneles) 
