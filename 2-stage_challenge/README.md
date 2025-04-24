@@ -1,5 +1,7 @@
 # Stage Challenge
 
+**Please make sure you've installed the [stage simulator](https://github.com/butia-bots/butia_learning/tree/main/0-installation#stage-simulator) before developing this challenge**
+
 This challenge is meant to introduce some basic ROS concepts to new users, however it assumes you’re familiar with fundamental ROS concepts, including creating and building packages and running nodes.
 
 The task is to develop a ROS node to control a differential robot. The node must be capable of guiding the robot from the origin (x=-7.0, y=-7.0) to the target coordinates (x=4.5, y=4.0) while avoiding obstacles. The minimum distance error from the robot to the target in relation to x and y is 0.4.
