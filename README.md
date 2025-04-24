@@ -8,8 +8,10 @@
 
 This repository also has a few exercises to introduce new concepts:
 
+0. [Installation](https://github.com/butia-bots/butia_learning/blob/main/0-installation/README.md)
+1. [Turtle Challenge](https://github.com/butia-bots/butia_learning/blob/main/1-turtle_challenge/README.md)
+2. [Stage Challenge](https://github.com/butia-bots/butia_learning/blob/main/1-stage_challenge/README.md)
 
-1. [Stage Challenge]()
 
 ## Versão em português
 
@@ -22,4 +24,6 @@ Bem vindo a wiki do butia_learning!
 Esse repositório contém alguns exercícios para introduzir novos conceitos:
 
 
-1. [Stage Challenge]()
+0. [Instalação](https://github.com/butia-bots/butia_learning/blob/main/0-installation/README.md)
+1. [Turtle Challenge](https://github.com/butia-bots/butia_learning/blob/main/1-turtle_challenge/README.md)
+2. [Stage Challenge](https://github.com/butia-bots/butia_learning/blob/main/1-stage_challenge/README.md)
