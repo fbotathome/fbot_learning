@@ -1,4 +1,5 @@
-# Introduction to the Robotics Development Environment
+<img width="4619" height="719" alt="fbot_learning" src="https://github.com/user-attachments/assets/1ca85db0-4bef-4838-af63-9d501add4e05" />
+
 
 ## English version
 
