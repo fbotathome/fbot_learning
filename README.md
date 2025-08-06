@@ -16,7 +16,7 @@ This repository also has a few exercises to introduce new concepts:
 
 ## Versão em português
 
-Bem vindo a wiki do butia_learning!
+Bem vindo a wiki do fbot_learning!
 
 - [Confira nossa wiki](https://github.com/butia-bots/butia_learning/wiki)
 
