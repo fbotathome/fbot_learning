@@ -1,8 +1,10 @@
 # Stage Challenge
 
+## English
+
 **Please make sure you've installed the [stage simulator](https://github.com/butia-bots/butia_learning/tree/main/0-installation#stage-simulator) before developing this challenge**
 
-This challenge is meant to introduce some basic ROS concepts to new users, however it assumes you’re familiar with fundamental ROS concepts, including creating and building packages and running nodes.
+This challenge is meant to introduce some basic ROS concepts to new users, however it assumes you're familiar with fundamental ROS concepts, including creating and building packages and running nodes.
 
 The task is to develop a ROS node to control a differential robot. The node must be capable of guiding the robot from the origin (x=-7.0, y=-7.0) to the target coordinates (x=4.5, y=4.0) while avoiding obstacles. The minimum distance error from the robot to the target in relation to x and y is 0.4.
 
@@ -10,16 +12,16 @@ The task is to develop a ROS node to control a differential robot. The node must
 
 The robot and LiDAR are visible in the bottom-left corner of the screen, while the target is highlighted in green at the top-right.
 
-## How to develop the challenge
+### How to develop the challenge
 
 - The robot in the simulation will be publishing a bunch of topics inside the ROS system, most importantly:
 
     - [Odometry:](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) This represents an estimate of the robot's position and velocity in free space.
     - [LaserScan:](https://docs.ros2.org/foxy/api/sensor_msgs/msg/LaserScan.html) Supplies range measurements from a 2D planar laser scanner, useful for obstacle detection and mapping the environment.
 
-- The odometry data will be utilized to track the robot’s current pose (position and orientation) on the 2D plane. The laser scan data will be used to identify nearby obstacles.
+- The odometry data will be utilized to track the robot's current pose (position and orientation) on the 2D plane. The laser scan data will be used to identify nearby obstacles.
 
-You must use the robot’s position, which starts at the initial coordinates (x = -7.0, y = -7.0), provided by the /ground_truth topic, along with the distance information captured by the laser, which is published to the /base_scan topic. The robot should be controlled by sending messages to the /cmd_vel topic, which contains the robot’s linear and angular velocities. The velocity control can be handled in either a discrete or continuous manner, with discretization being an easier approach for implementing the control algorithm.
+You must use the robot's position, which starts at the initial coordinates (x = -7.0, y = -7.0), provided by the /ground_truth topic, along with the distance information captured by the laser, which is published to the /base_scan topic. The robot should be controlled by sending messages to the /cmd_vel topic, which contains the robot's linear and angular velocities. The velocity control can be handled in either a discrete or continuous manner, with discretization being an easier approach for implementing the control algorithm.
 
 To implement this behavior, you should modify the execute() method of the ChallengeNode node provided in this repository. Then run the simulator:
 
@@ -27,7 +29,7 @@ To implement this behavior, you should modify the execute() method of the Challe
 cd fbot_ws
 source install/setup.bash
 ros2 launch stage_ros2 stage.launch.py world:=cave enforce_prefixes:=false one_tf_tree:=true
-``` 
+```
 
 And the node:
 
@@ -36,19 +38,73 @@ ros2 run stage_challenge challenge_node
 ```
 
 
-## Laser Sensor
+### Laser Sensor
 
 The laser sensor performs 1080 measurements and covers 270 degrees (from 0 to 270 degrees), with 135 degrees to the left (counterclockwise) and 135 degrees to the right (clockwise), corresponding to the blue and green lines in the figure below. In the LaserScan message, the ranges vector stores the distance values for each measurement, where the first elements represent measurements to the right, and the last elements represent measurements to the left, as indicated by the red lines in the figure.
 
 ![Laser sensor](laserscan_image.png)
 
-## Help
+### Help
 
 If you're having trouble developing the challenge, you can refer to this [series of videos](https://www.youtube.com/playlist?list=PLhxZVyws6Ytssb_CJA5cKxY5IxecOvJao), including video 19 which goes over a very similar challenge.
 
 If you have more specific questions, feel free to open a [discussion](https://github.com/butia-bots/butia_learning/discussions) in this repository.
 
-## Credits
+---
 
-Made and mantained by [Gabriel Dorneles](https://github.com/gadorneles) \
+## Português
+
+**Certifique-se de ter instalado o [Stage simulator](https://github.com/butia-bots/butia_learning/tree/main/0-installation#stage-simulator) antes de desenvolver este desafio**
+
+Este desafio tem como objetivo introduzir alguns conceitos básicos de ROS para novos usuários, porém assume que você já está familiarizado com conceitos fundamentais de ROS, incluindo criar e compilar packages e executar nodes.
+
+A tarefa é desenvolver um node ROS para controlar um robô diferencial. O node deve ser capaz de guiar o robô da origem (x=-7.0, y=-7.0) até as coordenadas alvo (x=4.5, y=4.0) desviando de obstáculos. O erro mínimo de distância do robô até o alvo em relação a x e y é 0.4.
+
+![stage simulator](image.png)
+
+O robô e o LiDAR estão visíveis no canto inferior esquerdo da tela, enquanto o alvo está destacado em verde no canto superior direito.
+
+### Como desenvolver o desafio
+
+- O robô na simulação publica diversos topics dentro do sistema ROS, sendo os mais importantes:
+
+    - [Odometry:](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) Representa uma estimativa da posição e velocidade do robô no espaço livre.
+    - [LaserScan:](https://docs.ros2.org/foxy/api/sensor_msgs/msg/LaserScan.html) Fornece medições de distância de um laser scanner 2D planar, útil para detecção de obstáculos e mapeamento do ambiente.
+
+- Os dados de odometry serão utilizados para rastrear a pose atual do robô (posição e orientação) no plano 2D. Os dados de laser scan serão usados para identificar obstáculos próximos.
+
+Você deve utilizar a posição do robô, que começa nas coordenadas iniciais (x = -7.0, y = -7.0), fornecida pelo topic /ground_truth, junto com as informações de distância capturadas pelo laser, publicadas no topic /base_scan. O robô deve ser controlado enviando mensagens para o topic /cmd_vel, que contém as velocidades linear e angular do robô. O controle de velocidade pode ser feito de forma discreta ou contínua, sendo a discretização uma abordagem mais fácil para implementar o algoritmo de controle.
+
+Para implementar esse comportamento, você deve modificar o método execute() do node ChallengeNode fornecido neste repositório. Então execute o simulador:
+
+```bash
+cd fbot_ws
+source install/setup.bash
+ros2 launch stage_ros2 stage.launch.py world:=cave enforce_prefixes:=false one_tf_tree:=true
+```
+
+E o node:
+
+```bash
+ros2 run stage_challenge challenge_node
+```
+
+
+### Sensor Laser
+
+O sensor laser realiza 1080 medições e cobre 270 graus (de 0 a 270 graus), com 135 graus para a esquerda (sentido anti-horário) e 135 graus para a direita (sentido horário), correspondendo às linhas azul e verde na figura abaixo. Na mensagem LaserScan, o vetor ranges armazena os valores de distância para cada medição, onde os primeiros elementos representam medições à direita e os últimos elementos representam medições à esquerda, conforme indicado pelas linhas vermelhas na figura.
+
+![Laser sensor](laserscan_image.png)
+
+### Ajuda
+
+Se você estiver com dificuldades para desenvolver o desafio, pode consultar esta [série de vídeos](https://www.youtube.com/playlist?list=PLhxZVyws6Ytssb_CJA5cKxY5IxecOvJao), incluindo o vídeo 19 que aborda um desafio muito semelhante.
+
+Se você tiver dúvidas mais específicas, fique à vontade para abrir uma [discussion](https://github.com/butia-bots/butia_learning/discussions) neste repositório.
+
+---
+
+## Credits / Créditos
+
+Made and maintained by [Gabriel Dorneles](https://github.com/gadorneles) \
 Based on the work of [Ricardo Grando](https://github.com/ricardoGrando)
