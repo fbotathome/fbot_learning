@@ -6,7 +6,7 @@ This challenge introduces state machines using the [YASMIN](https://github.com/u
 
 The task is to develop a YASMIN state machine that makes the turtle draw an uppercase letter **F** in the turtlesim window.
 
-![turtle](image.png)
+<img width="797" height="833" alt="image" src="https://github.com/user-attachments/assets/b8c572cb-d94f-47dc-a006-2c3c6637f951" />
 
 ## Installing YASMIN
 
